@@ -23,3 +23,8 @@ Route::post('/user', function (Request $request)
     http_response_code(300);
     return $request;
 });
+
+Route::get('/', function ()
+{
+    return 'I am the captain now';
+});
