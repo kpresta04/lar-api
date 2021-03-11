@@ -1,24 +1,31 @@
 <?php
 
-require '../app/Deck.php';
+// require '../app/Deck.php';
+require '../app/Game.php';
 
-$deck = new Deck();
 
-$deck->shuffleDeck();
+// $deck = new Deck();
 
-$firstCard = $deck->deal();
+$game = new Game();
+
+$game->deck->shuffleDeck();
+
+$game->startGame();
+echo print_r($game->players);
+
+// $firstCard = $deck->deal();
 // echo $firstCard . "<br />";
-// echo print_r($deck->deck) . "<br />";
+// echo print_r($game->deck->deck) . "<br />";
 // echo count($deck->deck) . "<br />";
 
-$secondCard = $deck->deal();
+// $secondCard = $deck->deal();
 // echo $secondCard . "<br />";
 // echo print_r($deck->deck) . "<br />";
 
 // echo count($deck->deck);
     // echo print_r($deck->dealtCards);
 
-echo $firstCard;
+// echo $firstCard;
 
 $blowie = 'test data'
 ?>
@@ -47,6 +54,7 @@ $blowie = 'test data'
   				background-color: #000000;
   				box-shadow: 5px 1px 10px #000000;
 				color: white !important;
+				min-height: 100vh;
             }
         </style>
     </head>
@@ -57,7 +65,9 @@ $blowie = 'test data'
                 @extends('layouts.app')
                 @section('content')
             
-                 <playing-card shortstring="<?php echo $firstCard;?>" ></playing-card>
+                 <playing-card shortstring="<?php echo $game->players[1]->hand[0] ?? 'As' ;?>" ></playing-card>
+                 <playing-card shortstring="<?php echo $game->players[1]->hand[1] ?? 'As' ;?>" ></playing-card>
+
                 @endsection
 
                 

@@ -5,7 +5,7 @@ class Deck
     public $deck;
     public $dealtCards;
 
-    public function __construct($deck = '52')
+    public function __construct()
     {
         $deckArray = [];
         $suits = ['c', 'h', 's', 'd'];
@@ -24,9 +24,9 @@ class Deck
         $this->dealtCards = [];
     }
 
-    public function deal()
+    public function deal($numberToDeal = 1)
     {
-        if (count($this->deck) > 0)
+        if (count($this->deck) >= $numberToDeal)
         {
             $card = array_shift($this->deck);
             array_push($this->dealtCards, $card);
