@@ -14,9 +14,6 @@
 
 <script>
 export default {
-    mounted() {
-        console.log(this.blowie);
-    },
     props: ["blowie"],
 };
 </script>

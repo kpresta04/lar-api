@@ -1860,9 +1860,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  mounted: function mounted() {
-    console.log(this.blowie);
-  },
   props: ["blowie"]
 });
 
@@ -1941,7 +1938,15 @@ var imageDict = {
   Back: "/images/skull_Card_back.png"
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ["shortString"]
+  data: function data() {
+    return {
+      imageDict: imageDict
+    };
+  },
+  mounted: function mounted() {
+    console.log(this.shortstring);
+  },
+  props: ["shortstring"]
 });
 
 /***/ }),
@@ -37619,7 +37624,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("img", {
-      attrs: { src: _vm.imageDict["" + _vm.shortString], alt: _vm.shortString }
+      attrs: { src: _vm.imageDict["" + _vm.shortstring], alt: _vm.shortstring }
     })
   ])
 }

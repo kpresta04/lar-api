@@ -42,6 +42,11 @@ $blowie = 'test data'
         <style>
             body {
                 font-family: 'Nunito';
+				background: radial-gradient(#34b445, #000000);
+  				background-repeat: repeat-y;
+  				background-color: #000000;
+  				box-shadow: 5px 1px 10px #000000;
+				color: white !important;
             }
         </style>
     </head>
@@ -52,7 +57,6 @@ $blowie = 'test data'
                 @extends('layouts.app')
                 @section('content')
             
-                 <example-component blowie="<?php echo $blowie;?>" ></example-component>
                  <playing-card shortstring="<?php echo $firstCard;?>" ></playing-card>
                 @endsection
 

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img :src="imageDict[`${shortString}`]" :alt="shortString" />
+        <img :src="imageDict[`${shortstring}`]" :alt="shortstring" />
     </div>
 </template>
 
@@ -66,7 +66,15 @@ const imageDict = {
     Back: "/images/skull_Card_back.png"
 };
 export default {
-    props: ["shortString"]
+    data() {
+        return {
+            imageDict
+        };
+    },
+    mounted() {
+        console.log(this.shortstring);
+    },
+    props: ["shortstring"]
 };
 </script>
 
