@@ -1,6 +1,7 @@
 <?php
 class Deck
 {
+    public $unshuffledDeck;
     public $deck;
     public $dealtCards;
 
@@ -19,8 +20,8 @@ class Deck
         }
 
         $this->deck = $deckArray;
+        $this->unshuffledDeck = $deckArray;
         $this->dealtCards = [];
-        // echo print_r($this->deck);
     }
 
     public function deal()
@@ -36,7 +37,5 @@ class Deck
     public function shuffleDeck()
     {
         shuffle($this->deck);
-        // echo count($this->deck);
-        // echo print_r($this->deck);
     }
 };

@@ -1,6 +1,5 @@
 <?php
 
-// echo 'yehudah';
 require '../app/Deck.php';
 
 $deck = new Deck();
