@@ -1,26 +1,6 @@
 <?php
 
-require '../app/Deck.php';
 
-$deck = new Deck();
-
-$deck->shuffleDeck();
-
-$firstCard = $deck->deal();
-// echo $firstCard . "<br />";
-// echo print_r($deck->deck) . "<br />";
-// echo count($deck->deck) . "<br />";
-
-$secondCard = $deck->deal();
-// echo $secondCard . "<br />";
-// echo print_r($deck->deck) . "<br />";
-
-// echo count($deck->deck);
-    // echo print_r($deck->dealtCards);
-
-echo $firstCard;
-
-$blowie = 'test data'
 ?>
 
 <!DOCTYPE html>
@@ -52,8 +32,8 @@ $blowie = 'test data'
                 @extends('layouts.app')
                 @section('content')
             
-                 <example-component blowie="<?php echo $blowie;?>" ></example-component>
-                 <playing-card shortstring="<?php echo $firstCard;?>" ></playing-card>
+                 <example-component ></example-component>
+                
                 @endsection
 
                 

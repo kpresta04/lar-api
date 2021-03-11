@@ -13,7 +13,5 @@
 </template>
 
 <script>
-export default {
-    props: ["blowie"],
-};
+export default {};
 </script>

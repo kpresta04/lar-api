@@ -72,8 +72,10 @@ $blowie = 'test data'
 				
 					
 				@endforeach
-            
-
+		
+				<button onclick="console.log('heylo')">
+				Restart
+				</button>
                 @endsection
 
                 
