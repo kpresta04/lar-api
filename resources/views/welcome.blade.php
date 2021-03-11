@@ -1,6 +1,25 @@
 <?php
 
-echo 'yehudah';
+// echo 'yehudah';
+require '../app/Deck.php';
+
+$deck = new Deck();
+
+$deck->shuffleDeck();
+
+$firstCard = $deck->deal();
+// echo $firstCard . "<br />";
+// echo print_r($deck->deck) . "<br />";
+// echo count($deck->deck) . "<br />";
+
+$secondCard = $deck->deal();
+// echo $secondCard . "<br />";
+// echo print_r($deck->deck) . "<br />";
+
+// echo count($deck->deck);
+    echo print_r($deck->dealtCards);
+
+$blowie = 'test data'
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +51,7 @@ echo 'yehudah';
                 @extends('layouts.app')
                 @section('content')
             
-                 <example-component></example-component>
+                 <example-component blowie="<?php echo $blowie;?>" ></example-component>
                 @endsection
 
                 
