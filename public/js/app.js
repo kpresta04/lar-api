@@ -1880,8 +1880,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 var imageDict = {
   Ac: "/images/01_Ace_Clubs_100.png",
   Ad: "/images/01_Ace_Diamonds.png",
@@ -37622,11 +37620,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("img", {
-      attrs: { src: _vm.imageDict["" + _vm.shortstring], alt: _vm.shortstring }
-    })
-  ])
+  return _c("img", {
+    attrs: { src: _vm.imageDict["" + _vm.shortstring], alt: _vm.shortstring }
+  })
 }
 var staticRenderFns = []
 render._withStripped = true

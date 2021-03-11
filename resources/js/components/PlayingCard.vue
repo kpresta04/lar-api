@@ -1,7 +1,5 @@
 <template>
-    <div>
-        <img :src="imageDict[`${shortstring}`]" :alt="shortstring" />
-    </div>
+    <img :src="imageDict[`${shortstring}`]" :alt="shortstring" />
 </template>
 
 <script>
