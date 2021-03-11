@@ -7,8 +7,10 @@ class Game
 {
     public $players;
     public $deck;
+    public $bigBlind;
+    public $smallBlind;
 
-    public function __construct($numOfPlayers = 2)
+    public function __construct($numOfPlayers = 2, $bigBlind = 10, $smallBlind = 5)
     {
         $players = [];
 
@@ -19,6 +21,8 @@ class Game
         }
         $this->players = $players;
         $this->deck = new Deck();
+        $this->bigBlind = $bigBlind;
+        $this->smallBlind = $smallBlind;
     }
 
     public function startGame($numberToDeal = 2)

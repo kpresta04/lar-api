@@ -64,9 +64,15 @@ $blowie = 'test data'
             
                 @extends('layouts.app')
                 @section('content')
+
+				@foreach ($game->players[1]->hand as $card)
+				
+
+					<playing-card shortstring="<?php echo $card ?? 'As' ;?>" ></playing-card>
+				
+					
+				@endforeach
             
-                 <playing-card shortstring="<?php echo $game->players[1]->hand[0] ?? 'As' ;?>" ></playing-card>
-                 <playing-card shortstring="<?php echo $game->players[1]->hand[1] ?? 'As' ;?>" ></playing-card>
 
                 @endsection
 
