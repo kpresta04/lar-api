@@ -10,7 +10,18 @@
 
 try {
     //code...
-    echo print_r(session('game'));
+
+$game = session('game') ?? file_get_contents('https://immense-peak-24443.herokuapp.com/api/game');
+
+session(['game' => $game]);
+// echo print_r(session()->all());
+
+$get = file_get_contents('https://immense-peak-24443.herokuapp.com/api/session');
+
+echo $get;
+
+// echo session('game');
+
 } catch (\Throwable $th) {
    echo $th;
 }

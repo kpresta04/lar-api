@@ -402,7 +402,13 @@
 
 
 
-    <h1>Home Page</h1>
+    @extends('layouts.app')
+    @section('content')
+
+    <example-component></example-component>
+
+    @endsection
+
 
 
 
