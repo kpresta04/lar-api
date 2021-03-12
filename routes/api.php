@@ -34,5 +34,5 @@ Route::get('/', function ()
 Route::get('/game', function ()
 {
     $game = new Game();
-    return json_encode($game);
+    return $game;
 });
