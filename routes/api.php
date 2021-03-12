@@ -34,7 +34,5 @@ Route::get('/', function ()
 Route::get('/game', function ()
 {
     //code...
-    $game = new Game();
-    session(['game' => $game]);
-    return $game;
+    return 'hello';
 });
