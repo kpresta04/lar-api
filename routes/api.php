@@ -42,6 +42,6 @@ Route::get('/game', function ()
     }
     catch (\Throwable $th)
     {
-        throw $th;
+        return $th;
     }
 });
