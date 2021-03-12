@@ -42,5 +42,5 @@ Route::get('/game', function ()
 
 Route::get('/session', function ()
 {
-    return session('game');
+    return session()->all();
 });
