@@ -33,7 +33,15 @@ Route::get('/', function ()
 
 Route::get('/game', function ()
 {
-    $game = new Game();
-    $game->startGame();
-    return $game;
+    try
+    {
+        //code...
+        $game = new Game();
+        $game->startGame();
+        return $game;
+    }
+    catch (\Throwable $th)
+    {
+        throw $th;
+    }
 });
