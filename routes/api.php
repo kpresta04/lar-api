@@ -1,6 +1,6 @@
 <?php
 
-// require '../app/Game.php';
+require '../app/Game.php';
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
