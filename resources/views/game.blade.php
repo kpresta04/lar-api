@@ -14,14 +14,13 @@ session(['name' => 'Jehudah']);
 try {
 //code...
 
-// $game = session('game') ?? file_get_contents('https://immense-peak-24443.herokuapp.com/api/game');
+$game = session('game') ?? file_get_contents('https://immense-peak-24443.herokuapp.com/api/game');
 // echo print_r(session()->all());
-$game = (session('game'));
-echo print_r(session()->all());
+// echo print_r(session()->all());
 
 // $game->startGame();
 
-// echo $game;
+echo $game;
 // session(['game' => $game]);
 
 // $get = file_get_contents('https://immense-peak-24443.herokuapp.com/api/session');

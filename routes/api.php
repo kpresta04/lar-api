@@ -50,6 +50,6 @@ Route::group(['middleware' => ['web']], function ()
 
         // $request->session(['game' => json_encode($game)]);
         $data = $request->session()->all();
-        return $data;
+        return json_encode($data);
     });
 });
