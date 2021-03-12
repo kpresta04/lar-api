@@ -1,5 +1,6 @@
 <?php
 
+// require '../app/Game.php';
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -27,4 +28,12 @@ Route::post('/user', function (Request $request)
 Route::get('/', function ()
 {
     return 'I am the captain now';
+});
+
+Route::get('/game', function ()
+{
+    // $game = new Game();
+    // return json_encode($game);
+
+    return 'game route';
 });
