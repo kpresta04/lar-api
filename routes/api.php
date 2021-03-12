@@ -33,6 +33,6 @@ Route::get('/', function ()
 
 Route::get('/game', function ()
 {
-    $game = new Game();
-    return $game;
+    // $game = new Game();
+    return session('game');
 });
