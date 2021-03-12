@@ -31,18 +31,18 @@ Route::get('/', function ()
     return 'I am the captain now';
 });
 
-Route::get('/game', function ()
+Route::get('/game', function (Request $request)
 {
     $game = new Game();
     $game->startGame();
 
-    session(['game' => json_encode($game)]);
-    return session('game');
+    $request->session(['game' => json_encode($game)]);
+    return $request->session('game');
 });
 
-Route::get('/session', function ()
+Route::get('/session', function (Request $request)
 {
     session(['hello' => 'session route']);
-    $session = session()->all();
+    $session = $request->session()->all();
     return $session;
 });
