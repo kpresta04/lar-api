@@ -11,14 +11,15 @@
 try {
     //code...
 
-$game = session('game') ?? file_get_contents('https://immense-peak-24443.herokuapp.com/api/game');
-
-session(['game' => $game]);
+    echo print_r(session()->all());
+// $game = session('game') ?? file_get_contents('https://immense-peak-24443.herokuapp.com/api/game');
 // echo print_r(session()->all());
 
-$get = file_get_contents('https://immense-peak-24443.herokuapp.com/api/session');
+// session(['game' => $game]);
 
-echo print_r($get);
+// $get = file_get_contents('https://immense-peak-24443.herokuapp.com/api/session');
+
+// echo print_r($get);
 
 // echo session('game');
 

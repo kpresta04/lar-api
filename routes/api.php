@@ -42,7 +42,6 @@ Route::get('/game', function (Request $request)
 
 Route::get('/session', function (Request $request)
 {
-    session(['hello' => 'session route']);
-    $session = $request->session()->all();
-    return $session;
+    $data = $request->session()->all();
+    return $data;
 });
