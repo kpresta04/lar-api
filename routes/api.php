@@ -37,7 +37,7 @@ Route::get('/game', function ()
     {
         //code...
         $game = new Game();
-        $game->startGame();
+        session(['game' => $game]);
         return $game;
     }
     catch (\Throwable $th)
