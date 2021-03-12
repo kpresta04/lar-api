@@ -1,6 +1,6 @@
 <?php
 
-require './app/Game.php';
+require 'test.php';
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -35,5 +35,7 @@ Route::get('/game', function ()
     // $game = new Game();
     // return json_encode($game);
 
-    return 'game route';
+    $test = new Test('Gerard');
+
+    return $test->name;
 });
