@@ -45,11 +45,11 @@ Route::group(['middleware' => ['web']], function ()
         {
             $game = new Game();
             $game->startGame();
-            $request->session()->put('game', json_encode($game));
+            $request->session()->put('game', $game);
         }
 
-        // $request->session(['game' => json_encode($game)]);
-        $data = $request->session()->all();
-        return json_encode($data);
+        $data = $request->session()->get('game');
+        // $data = $request->session()->all();
+        return $data;
     });
 });
