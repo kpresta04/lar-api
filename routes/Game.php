@@ -27,6 +27,7 @@ class Game
 
     public function startGame($numberToDeal = 2)
     {
+        $this->deck->shuffleDeck();
         foreach ($this->players as $player)
         {
             $newHand = [];
