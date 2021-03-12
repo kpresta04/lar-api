@@ -8,7 +8,7 @@
 
 // $game = new Game();
 
-
+echo print_r(session('game'));
 // $game->deck->shuffleDeck();
 
 // $game->startGame();
