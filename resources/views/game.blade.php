@@ -8,13 +8,16 @@
 
 // $game = new Game();
 
-try {
-    //code...
 
-    // $game = session('game') ?? file_get_contents('https://immense-peak-24443.herokuapp.com/api/game');
-    // echo print_r(session()->all());
-    $game = (session('game'));
-    echo print_r(session()->all());
+session(['name' => 'Jehudah']);
+
+try {
+//code...
+
+// $game = session('game') ?? file_get_contents('https://immense-peak-24443.herokuapp.com/api/game');
+// echo print_r(session()->all());
+$game = (session('game'));
+echo print_r(session()->all());
 
 // $game->startGame();
 
@@ -28,7 +31,7 @@ try {
 // echo session('game');
 
 } catch (\Throwable $th) {
-   echo $th;
+echo $th;
 }
 
 // $game->deck->shuffleDeck();
@@ -46,7 +49,7 @@ try {
 // echo print_r($deck->deck) . "<br />";
 
 // echo count($deck->deck);
-    // echo print_r($deck->dealtCards);
+// echo print_r($deck->dealtCards);
 
 // echo $firstCard;
 
@@ -457,6 +460,11 @@ $blowie = 'test data'
             min-height: 100vh;
         }
     </style>
+    <script>
+        const printHello = ()=> {
+        console.log("Name ")
+    }
+    </script>
 </head>
 
 <body class="antialiased">
@@ -474,7 +482,7 @@ $blowie = 'test data'
 
     @endforeach --}}
 
-    <button onclick="fetch('https://immense-peak-24443.herokuapp.com/api/').then(res=> console.log(res.json()))">
+    <button onclick="printHello()">
         Restart
     </button>
     @endsection

@@ -28,20 +28,28 @@ Route::post('/user', function (Request $request)
 
 Route::get('/', function ()
 {
-    return 'I am the captain now';
+    return 'I am the captain noe';
 });
 
-Route::get('/game', function (Request $request)
+Route::group(['middleware' => ['web']], function ()
 {
-    $game = new Game();
-    $game->startGame();
+    // your routes here
+    Route::get('/session', function (Request $request)
+    {
+        $data = $request->session()->all();
+        return $data;
+    });
+    Route::get('/game', function (Request $request)
+    {
+        if (!$request->session()->has('game'))
+        {
+            $game = new Game();
+            $game->startGame();
+            $request->session()->put('game', json_encode($game));
+        }
 
-    $request->session(['game' => json_encode($game)]);
-    return json_encode($game);
-});
-
-Route::get('/session', function (Request $request)
-{
-    $data = $request->session()->all();
-    return $data;
+        // $request->session(['game' => json_encode($game)]);
+        $data = $request->session()->all();
+        return $data;
+    });
 });
