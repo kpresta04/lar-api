@@ -8,7 +8,13 @@
 
 // $game = new Game();
 
-echo print_r(session('game'));
+try {
+    //code...
+    echo print_r(session('game'));
+} catch (\Throwable $th) {
+   echo $th;
+}
+
 // $game->deck->shuffleDeck();
 
 // $game->startGame();
