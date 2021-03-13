@@ -7,20 +7,28 @@
 // $deck = new Deck();
 
 // $game = new Game();
+use GuzzleHttp\Client;
 
-
-session(['name' => 'Jehudah']);
-
+$client = new Client([
+    // Base URI is used with relative requests
+    'base_uri' => 'localhost:8000/api',
+    // You can set any number of default request options.
+    'timeout'  => 2.0,
+]);
 try {
 //code...
 
-$game = session('game') ?? file_get_contents('localhost:8000/api/game');
+// $response = $client->request('GET', '/api');
+
+// echo $response;
+
+// $game = session('game') ?? file_get_contents('https://immense-peak-24443.herokuapp.com/api/game');
 // echo print_r(session()->all());
 // echo print_r(session()->all());
 
 // $game->startGame();
 
-echo $game;
+// echo $game;
 // session(['game' => $game]);
 
 // $get = file_get_contents('https://immense-peak-24443.herokuapp.com/api/session');
